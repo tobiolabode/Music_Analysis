@@ -33,3 +33,18 @@ print(listofGenres, end="\n")
 print(listofGenres100, end="\n")
 
 #Ploting data
+colors = ['#ff9999','#66b3ff','#99ff99','#ffcc99',"#fcff6b","#ff6ae3","#a5ff69"]
+fig1, ax1 = plt.subplots()
+
+patches, texts, autotexts = ax1.pie(countsofgenre, colors = colors, labels=listofGenres,
+                                    autopct='%1.1f%%', startangle=90)
+
+for text in texts:
+    text.set_color('grey')
+
+for autotext in autotexts:
+    autotext.set_color('grey')
+
+ax1.axis('equal')
+plt.tight_layout()
+plt.show()
