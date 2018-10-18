@@ -24,8 +24,12 @@ print(Allsongsdataframe.value_counts())
 print(Top100dataframe.value_counts())
 
 listofGenres = Allsongsdataframe.value_counts().index.tolist()
+listofGenres100 = Top100dataframe.value_counts().index.tolist()
 countsofgenre = Allsongsdataframe.value_counts().tolist()
-print(countsofgenre)
-print(listofGenres)
+countsofgenre100 = Top100dataframe.value_counts().tolist()
+print(countsofgenre, end='\n')
+print(countsofgenre100)
+print(listofGenres, end="\n")
+print(listofGenres100, end="\n")
 
 #Ploting data
