@@ -37,11 +37,17 @@ print(listofGenres100, end="\n")
 colors = ['#ff9999','#66b3ff','#99ff99','#ffcc99',"#fcff6b","#ff6ae3","#a5ff69"]
 x = np.char.array(listofGenres)
 y = np.array(countsofgenre)
+y1 = np.array(countsofgenre100)
+x2 = np.array(listofGenres100)
 
+fig1, ax1 = plt.subplots()
+fig1, ax2 = plt.subplots()
 
 percent = 100.*y/y.sum()
-patches, texts, = plt.pie(y, colors=colors, startangle=90, radius=1.2)
+patches, texts, = ax1.pie(y, colors=colors, startangle=90, radius=1.2)
+patches1, texts2 = ax2.pie(y1, colors=colors, startangle=90, radius=1.2)
 labels = ['{0} - {1:1.2f} %'.format(i,j) for i,j in zip(x, percent)]
+labels2 = ['{0} - {1:1.2f} %'.format(i,j) for i,j in zip(x2, percent)]
 
 for text in texts:
     text.set_color('grey')
@@ -55,15 +61,24 @@ if sort_legend:
                                           key=lambda x: x[2],
                                           reverse=True))
 
+    patches1, labels1, dummy1 = zip(*sorted(zip(patches1, labels2, y1),
+                                            key=lambda x: x[2],
+                                            reverse=True))
 
-plt.legend(patches, labels, loc='center left', bbox_to_anchor=(-0.1, 1.),
+
+ax1.legend(patches, labels, loc='center left', bbox_to_anchor=(-0.1, 1.),
            fontsize=8)
 
-# fig1, ax1 = plt.subplots()
+
+
+ax2.legend(patches1, labels2, loc='center right', bbox_to_anchor=(-0.1, 1.),
+           fontsize=8)
+
 # patches, texts, autotexts = ax1.pie(countsofgenre, colors = colors, labels=listofGenres,
 #                                     autopct='%1.1f%%', startangle=90)
 
 
-# ax1.axis('equal')
+ax1.axis('equal')
+ax2.axis("equal")
 plt.tight_layout()
 plt.show()
