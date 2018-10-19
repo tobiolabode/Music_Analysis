@@ -79,6 +79,8 @@ ax2.legend(patches, labels2, loc='center right', bbox_to_anchor=(-0.1, 1.),
 #                                     autopct='%1.1f%%', startangle=90)
 
 
+ax1.set_title('All Songs')
+ax2.set_title('Top 100 Songs')
 ax1.axis('equal')
 ax2.axis("equal")
 plt.tight_layout()
