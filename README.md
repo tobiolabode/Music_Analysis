@@ -15,4 +15,5 @@ python main.py
 
 ## Acknowledgments
 The color schme and some ploting code was based from [this medium article](https://medium.com/@kvnamipara/a-better-visualisation-of-pie-charts-by-matplotlib-935b7667d77f) - by Kevin Amipara
+
 [This](https://stackoverflow.com/a/23578860) helpful stackflow article to fix the overlapping numbers issue
