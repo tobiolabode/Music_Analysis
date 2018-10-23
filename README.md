@@ -8,12 +8,12 @@ This with code is featured in my [medium article](https://medium.com/@tnint5r/vi
 
 
 ## Usage
-To use clone the repo then use command below
+To use, clone the repo change into the directory ,then use command below
 ```
 python main.py
 ```
 
 ## Acknowledgments
-The color schme and some ploting code was based from [this medium article](https://medium.com/@kvnamipara/a-better-visualisation-of-pie-charts-by-matplotlib-935b7667d77f) - by Kevin Amipara
+The color scheme and some ploting code was based from [this medium article](https://medium.com/@kvnamipara/a-better-visualisation-of-pie-charts-by-matplotlib-935b7667d77f) - by Kevin Amipara
 
 [This](https://stackoverflow.com/a/23578860) helpful stackflow article to fix the overlapping numbers issue
