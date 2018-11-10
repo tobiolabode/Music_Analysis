@@ -1,6 +1,7 @@
 # Music_Analysis
 This is my repositry for my music analysis project.
 This with code is featured in my [medium article](https://medium.com/@tnint5r/visualising-my-music-catalog-with-matplotlib-af9e499788d9) 
+![Image](https://cdn-images-1.medium.com/max/1200/1*QyyfsZNkeN3-DXvH5Mv61g.png)
 ## Installation
 ### Dependencies
 * Numpy 
